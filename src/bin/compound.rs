@@ -1,4 +1,5 @@
 fn main() {
+    // Data type: Tuple
     let tup: (u16, f32, char) = (500, 6.4, 'c');
     println!("tuple: {:?}", tup); 
     
