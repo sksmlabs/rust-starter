@@ -17,6 +17,12 @@ fn main() {
     };
     // try print y with semicolon after x+1;
     println!("The value of y is: {y}");
+
+    let z = return_value();
+    println!("The value of z is: {z}");
+
+    let z = return_plus_one(5);
+    println!("The value of z is: {z}");
 }
 
 fn another_function(x: i32) {
@@ -26,4 +32,14 @@ fn another_function(x: i32) {
 
 fn print_labelled_measurement(value: u32, unit_label: char) {
     println!("The measurement is: {value}{unit_label}");
+}
+
+fn return_value() -> i32 {
+    // Note: No semicolon
+    5
+}
+
+fn return_plus_one(x: i32) -> i32 {
+    //Compile error if tried with semicolon
+    x + 1
 }
